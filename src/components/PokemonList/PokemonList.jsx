@@ -50,13 +50,19 @@ function PokemonList(){
             setIsLoading(false);
     },[]);
 
-    
+
     return(
         <div className="pokemon-list-wrapper">
-           <h2>Pokemon List ...</h2> 
-           {isLoading ? 'Data Loading': 
-                pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
-           }
+           <h2>Pokemon List ...</h2>
+           <div className="pokemon-wrapper">
+                {isLoading ? 'Data Loading': 
+                        pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
+                }
+            </div>
+            <div className="controls">
+                <button>Prev</button>
+                <button>Next</button>
+            </div> 
         </div>
     )
 }
