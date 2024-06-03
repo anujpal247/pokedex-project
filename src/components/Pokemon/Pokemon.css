@@ -18,3 +18,8 @@
     font-size: larger;
     letter-spacing: 0.5rem;
 }
+
+.pokemon:hover{
+    background-color: #edede9;
+    border-radius: 10px;
+}
